@@ -22,7 +22,9 @@ class _QuizQuestionState extends State<QuizQuestionScreen> {
     widget.selectedAnswer(answer);
 
     setState(() {
-      currentQuetionIndex++;
+      if (currentQuetionIndex + 1 < QuizQuestionLoader().quizQuestions.length) {
+        currentQuetionIndex++;
+      }
     });
   }
 
